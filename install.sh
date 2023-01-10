@@ -7,11 +7,14 @@
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 mkdir -p "$XDG_CONFIG_HOME/nvim/lua"
+mkdir -p "$XDG_CONFIG_HOME/nvim/after/plugin"
 
 ln -sf "$DOTFILES/nvim/init.lua" "$XDG_CONFIG_HOME/nvim"
 ln -sf "$DOTFILES/nvim/lua/plugins.lua" "$XDG_CONFIG_HOME/nvim/lua"
 ln -sf "$DOTFILES/nvim/lua/options.lua" "$XDG_CONFIG_HOME/nvim/lua"
 ln -sf "$DOTFILES/nvim/lua/keymaps.lua" "$XDG_CONFIG_HOME/nvim/lua"
+ln -sf "$DOTFILES/nvim/after/plugin/lsp.lua" "$XDG_CONFIG_HOME/nvim/after/plugin"
+
 
 rm -rf "$XDG_CONFIG_HOME/X11"
 ln -s "$DOTFILES/X11" "$XDG_CONFIG_HOME"
