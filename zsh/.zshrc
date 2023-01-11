@@ -46,5 +46,7 @@ source $DOTFILES/zsh/scripts.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export PATH=/home/lda/.local/bin:$PATH
+export PATH=/home/lda/.cargo/bin:$PATH
 #exec setxkbmap sun_vndr/us
 
