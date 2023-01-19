@@ -71,4 +71,4 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>f", ":Format<cr>", opts)
 
 -- Telescope 
-keymap("n", "<leader>ff", ":Telescope find_files", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
