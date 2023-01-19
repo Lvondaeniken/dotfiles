@@ -105,7 +105,7 @@ bindsym $mod+p focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $terms "1: terms"
 set $web "2: web"
-set $ws3 "3"
+set $ws3 "3:keepass"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -140,6 +140,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 workspace_auto_back_and_forth yes
 
+assign [class="keepassxc" instance="Navigator"] $ws3
 assign [class="firefox" instance="Navigator"] $web
 
 focus_follows_mouse no
@@ -170,7 +171,7 @@ mode "$mode_system" {
 
 bindsym $mod+BackSpace mode "$mode_system"
 
-exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/feh/wallpaper.jpg
+exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/feh/wallpaper2.jpg
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
