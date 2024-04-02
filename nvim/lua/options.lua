@@ -46,7 +46,7 @@ o.updatetime = 250
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
 
--- g.mapleader = ","
+g.mapleader = ","
 
 -- disable some default providers
 vim.g["loaded_node_provider"] = 0
