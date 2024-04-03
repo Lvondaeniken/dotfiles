@@ -1,9 +1,14 @@
 return {
    "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
-    opts = function()
-      return require "configs.treesitter"
-    end,
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = { "rust", "python", "cpp", "c", "lua", "vim", "vimdoc" },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },
+        })
+    end
 }
