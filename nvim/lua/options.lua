@@ -6,6 +6,7 @@ local g = vim.g
 g.toggle_theme_icon = "   "
 
 -------------------------------------- options ------------------------------------------
+o.termguicolors = true
 o.laststatus = 3
 o.showmode = false
 
@@ -15,10 +16,10 @@ o.cursorlineopt = "number"
 
 -- Indenting
 o.expandtab = true
-o.shiftwidth = 2
+o.shiftwidth = 4
 o.smartindent = true
-o.tabstop = 2
-o.softtabstop = 2
+o.tabstop = 4
+o.softtabstop = 4
 
 opt.fillchars = { eob = " " }
 o.ignorecase = true
