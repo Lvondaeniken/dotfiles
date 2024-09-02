@@ -1,0 +1,19 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml",
+]
+
+[env]
+TERM = "screen-256color"
+
+
+[font.normal]
+family = "0xProto"
+style = "Regular"
+
+[font.bold]
+family = "0xProto"
+style = "Bold"
+
+[font.italic]
+family = "0xProto"
+style = "Italic"
