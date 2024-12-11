@@ -5,13 +5,17 @@ ENV_COLLECTION=~/dev/util/py-venv
 
 
 switch_to_venv () {
-    echo "switch to venv: $1"
-    local DIR=$ENV_COLLECTION/$1 
-    if [ ! -e $DIR ]; then
-        echo "creating new venv..."
-        python3 -m venv $DIR
-    fi 
-    source $DIR/bin/activate
+    if [[ $1 == "deactivate" && -n $VIRTUAL_ENV ]]; then
+        deactivate
+    else
+        echo "switch to venv: $1"
+        local DIR=$ENV_COLLECTION/$1 
+        if [ ! -e $DIR ]; then
+            echo "creating new venv..."
+            python3 -m venv $DIR
+        fi 
+        source $DIR/bin/activate
+    fi
 }
 
 # make sure directory for venv collection exists
@@ -20,6 +24,7 @@ if [ ! -e $ENV_COLLECTION ]; then
     echo "creating dir ${ENV_COLLECTION}..." 
 fi
 
+# check for args
 if [ $# -gt 0 ]; then
     switch_to_venv $1
 else
@@ -27,7 +32,7 @@ else
     OPTIONS+=$'\n''deactivate'
     echo "options: ${OPTIONS}" 
     VENV=$(echo "${OPTIONS}" | fzf)
-    #switch_to_venv $VENV
+    switch_to_venv $VENV
 fi
 
 
