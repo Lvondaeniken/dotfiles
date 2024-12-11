@@ -1,0 +1,26 @@
+#!/bin/bash
+ 
+# snap
+#snap install obsidian 
+
+# apt
+#apt install alacritty
+# TODO npm nodejs
+# lazygit
+
+# nvim
+ln -sf $PWD/config/nvim ~/.config/nvim
+
+# alacritty
+ln -sf $PWD/config/alacritty/ ~/.config/alacritty
+
+# font
+#mkdir -p ~/.fonts
+#cp -rf fonts ~/.fonts
+
+# tmux
+ln -sf $PWD/config/tmux.conf ~/.config/tmux
+
+
+# scripts
+ln -sf $PWD/scripts/pyenv ~/bin/pyenv
