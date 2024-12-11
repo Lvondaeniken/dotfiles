@@ -14,7 +14,7 @@ mkdir -p ~/.config/nvim
 ln -sf nvim ~/.config/nvim
 
 # alacritty
-ln -sf alacritty ~/.config/alacritty
+ln -sf config/alacritty ~/.config/alacritty
 
 # font
 mkdir -p ~/.fonts
