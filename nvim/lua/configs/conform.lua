@@ -4,6 +4,8 @@ local options = {
     python = {"autopep8"},
     lua = { "stylua" },
     rust = { "rustfmt", lsp_format = "fallback" },
+    json = {"jq"},
+    xml = {"xmllint"},
   },
 }
 return options
