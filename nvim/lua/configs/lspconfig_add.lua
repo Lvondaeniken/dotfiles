@@ -32,3 +32,17 @@ lspconfig.pyright.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+lspconfig.yamlls.setup({})
+
+-- setup helm-ls
+lspconfig.helm_ls.setup({
+  settings = {
+    ["helm-ls"] = {
+      yamlls = {
+        path = "yaml-language-server",
+      },
+    },
+  },
+})
+
