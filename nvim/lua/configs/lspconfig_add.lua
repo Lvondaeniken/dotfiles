@@ -5,38 +5,36 @@ local capabilities = require("configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
-
 -- rust analyzer
-lspconfig.rust_analyzer.setup {
+vim.lsp.config("rust_analyzer", {
+-- lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-}
+})
 
 -- clangd
-lspconfig.clangd.setup {
+vim.lsp.config("clangd", {
+-- lspconfig.clangd.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-}
+})
 
 -- pyright
-lspconfig.pyright.setup {
+vim.lsp.config("pyright", {
+-- lspconfig.pyright.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-}
+})
 
-lspconfig.yamlls.setup({})
+vim.lsp.config("yamlls", {})
+-- lspconfig.yamlls.setup({})
 
 -- setup helm-ls
-lspconfig.helm_ls.setup({
+vim.lsp.config("helm_ls", {
+-- lspconfig.helm_ls.setup({
   settings = {
     ["helm-ls"] = {
       yamlls = {
