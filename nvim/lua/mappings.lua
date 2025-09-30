@@ -17,5 +17,5 @@ map("n", "<C-m>", "<cmd>NvimTreeFocus<CR>", { desc = "Focus Tree" })
 
 -- conform
 map("n", "<leader>fm", function()
-  require("conform").format { lsp_fallback = true }
+	require("conform").format({ lsp_fallback = true })
 end, { desc = "Format Files" })

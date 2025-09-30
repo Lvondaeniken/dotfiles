@@ -44,3 +44,6 @@ vim.lsp.config("helm_ls", {
   },
 })
 
+-- setup eslint-lsp
+vim.lsp.config("eslint", {})
+
