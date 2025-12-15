@@ -19,3 +19,23 @@ map("n", "<C-m>", "<cmd>NvimTreeFocus<CR>", { desc = "Focus Tree" })
 map("n", "<leader>fm", function()
 	require("conform").format({ lsp_fallback = true })
 end, { desc = "Format Files" })
+
+map("n", "<leader>rc", function()
+	local filetype = vim.bo.filetype
+	local filepath = vim.fn.expand("%")
+	local cmd = ""
+
+	if filetype == "python" then
+		cmd = "!python3 " .. filepath
+	elseif filetype == "lua" then
+		cmd = "!lua " .. filepath
+	elseif filetype == "sh" then
+		cmd = "!bash " .. filepath
+	elseif filetype == "javascript" then
+		cmd = "!node " .. filepath
+	else
+		print("No run command configured for filetype: " .. filetype)
+		return
+	end
+	vim.cmd(cmd)
+end, { desc = "Run Code" })
